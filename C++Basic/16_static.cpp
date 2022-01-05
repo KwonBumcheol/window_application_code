@@ -13,11 +13,13 @@ using namespace std;
 
 class Car{
     int color;
-public:
     // Car 클래스 객체가 공유하는 데이터 변수
     static int cnt;
 
 public:
+    static int getCount(){
+        return cnt;
+    }
 
     Car(){
         ++cnt;
@@ -38,6 +40,9 @@ int Car::cnt = 0;
 //      1) Car::cnt => 권장
 //      2) Car c;
 //         c.cnt
+// 5. 정적 멤버 데이터 변수도 외부에서 수정될 수 없도록 하고,
+//    정적 멤버 데이터 변수를 수정할 수 있는 함수를 제공하는 것이 좋다.
+//  > 정적 멤버 함수
 
 struct User{
     int a;
@@ -48,9 +53,20 @@ int main(){
     cout << sizeof(User) << endl;   // 8
     cout << sizeof(Car) << endl;    // 4
 
-    cout << Car::cnt << endl;       // 0
+    // cout << Car::cnt << endl;       // 0
+    cout << Car::getCount() << endl;
 
     Car c1, c2;
-    cout << Car::cnt << endl;       // 2
-    cout << c1.cnt << endl;         // 2
+    // cout << Car::cnt << endl;       // 2
+    // cout << c1.cnt << endl;         // 2
+    cout << c1.getCount() << endl;
 }
+
+// 정리
+// 1. 정적 멤버 데이터
+// - 모든 객체가 공유하는 멤버 데이터, 객체를 생성하지 않아도 메모리가 존재한다.
+//   전역 변수와 달리 접근 지정자를 사용할 수 있고, 클래스 안에 포함되기 때문에 관련된 데이터를 묶어서 관리할 수 있다.
+// 2. 정적 멤버 함수
+// - 객체 없이 호출할 수 있는 멤버 함수이다.
+//   객체 없이 호출 되므로 일반 함수와 유사하지만, 접근 지정자를
+//   사용할 수 있고, 특정 타입과 관련된 함수를 묶어서 관리할 수 있다.
