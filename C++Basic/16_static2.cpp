@@ -17,11 +17,22 @@ class Sample{
 public:
     // Sample() : data(42) {}
     
+#if 0
     static void foo(){
         // data = 0; - error!
         cnt = 0;
     }
+#endif
+    static void foo();
 };
+
+// 정적 멤버 함수를 외부에 분리해서 정의할 때는,
+// static 키워드를 사용하지 않는다.
+
+// static
+void Sample::foo(){
+    cnt = 0;
+}
 
 int Sample::cnt = 0;
 
