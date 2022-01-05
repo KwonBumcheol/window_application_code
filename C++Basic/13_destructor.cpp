@@ -10,6 +10,8 @@ using namespace std;
 
 // 자원
 // => 메모리, 파일, 프로세스, 스레드, 락 ...
+// #include <string.h>
+#include <cstring>
 
 class User{
     char *name;

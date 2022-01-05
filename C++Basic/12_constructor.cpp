@@ -38,6 +38,7 @@ public:
 // malloc vs new
 // => 객체를 합에 생성할 때, new는 생성자가 호출되지만, malloc은 생성자가 호출되지 않는다.
 
+/*
 int main(){
     // Point *p2 = static_cast<Point *>malloc(siezeof((Point)));
     // free(p2);
@@ -54,7 +55,7 @@ int main(){
     // Point p2(10, 20);
     // Point p3(10) // 컴파일 오류
 }
-
+*/
 
 // 멤버의 생성자가 먼저 호출되고, 자신의 생성자가 호출된다.
 class Rect{
