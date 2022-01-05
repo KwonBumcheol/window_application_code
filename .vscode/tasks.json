@@ -13,7 +13,8 @@
             "args": [
                 "${file}",
                 "-o",
-                "${fileDirname}/${fileBasenameNoExtension}"
+                "${fileDirname}/${fileBasenameNoExtension}",
+                "-std=c++14"
             ],
             "group": "build",
             "problemMatcher": {
