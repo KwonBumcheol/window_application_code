@@ -1,6 +1,7 @@
 // C++11부터 스레드를 표준 라이브러리를 통해 지원한다.
 #include <iostream>
 #include <thread>
+#include <mutex>
 
 #if 0
 void foo(){
@@ -15,8 +16,17 @@ int main(){
 }
 #endif
 
+int sum = 0;
+std::mutex m;
+
 void thread_routine(const char* name){
     std::cout << name << std::endl;
+
+    for(int i=0; i<1000000; i++){
+        m.lock();
+        sum += 1;
+        m.unlock();
+    }
 }
 
 int main(){
@@ -25,4 +35,6 @@ int main(){
 
     t1.join();
     t2.join();
+
+    std::cout << "sum: " << sum << std::endl;
 }
