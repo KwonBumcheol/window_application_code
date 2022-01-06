@@ -26,17 +26,18 @@ public:
 };
 
 void foo(const Point &p){
+    // 상수 멤버 함수만 사용할 수 있다.
     // p.move();
 }
 
 int main(){
-    // const Point p(10, 20);
+    const Point p1(10, 20);
     // p.move();
-    // p.print();
+    p1.print();
 
-    Point p(20, 30);
-    p.move(10);
-    p.print();
+    Point p2(20, 30);
+    p2.move(10);
+    p2.print();
 }
 
 // 상수 멤버 함수가 왜 필요한가?
