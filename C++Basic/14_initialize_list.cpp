@@ -9,6 +9,7 @@ public:
     // 아래처럼 사용하는 것은 대입이다.
     /*
     Point(int a, int b){
+        // 대입의 형태로 동작한다.
         x = a;
         y = b;
     }
@@ -38,5 +39,5 @@ int main(){
     int &r = a;
 
     int b;
-    b = 10;
+    b = 10; // 대입
 }

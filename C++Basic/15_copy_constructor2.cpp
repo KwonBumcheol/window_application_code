@@ -21,8 +21,10 @@ int main()
   // 1. 객체를 만들 때 자신과 동일한 타입으로 초기화되는 경우
   //    호출됩니다.
   Point p1;     // Point()
+
   Point p2(p1); // Point(const Point&)
   Point p3 = p1; // Point(const Point&)
+
   Point p4{p1};    // Point(const Point&)
   Point p5 = {p1}; // Point(const Point&)
 }
@@ -76,7 +78,7 @@ Point &foo()
 
 int main()
 {
-  foo();
+  Point ret = foo();
   // 리턴 값으로 돌아온 객체는 p가 아니라 반환용 임시 객체가
   // 전달됩니다.
   // 반환용 임시객체는 함수 호출문장 끝에서 파괴됩니다.
