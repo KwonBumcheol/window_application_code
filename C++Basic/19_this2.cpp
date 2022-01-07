@@ -91,7 +91,7 @@ int main(){
     // user.setAddress("Seoul");
     // user.setPhone("010-1234-5678");
     
-    // user.setName("Tom")->user.setAddress("Seoul")->user.setPhone("010-1234-5678");
+    // user.setName("Tom")->setAddress("Seoul")->setPhone("010-1234-5678");
 
     user.setName("Tom").setAddress("Seoul").setPhone("010-1234-1234");
 }
