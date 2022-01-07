@@ -19,7 +19,9 @@ public:
     //   명시적으로 부모의 생성자를 호출해야 한다.
     // Derived(){cout << "Derived()" << endl;}
 
-    Derived() : Base(42) { cout << "Derived()" << endl; }
+    Derived() : Base(42) /* : Base() - 컴파일러가 자동으로 처리해준다. */ { 
+        cout << "Derived()" << endl; 
+    }
 
     ~Derived(){ 
         cout << "~Derived()" << endl;
