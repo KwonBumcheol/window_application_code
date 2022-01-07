@@ -1,13 +1,13 @@
 #include <iostream>
 using namespace std;
 
+#if 0
 class Test{
 public:
     Test(){cout << "자원 획득" << endl;}
     ~Test(){cout << "자원 반납" << endl;}
 };
 
-#if 0
 int main(){
     // Test t;
     Test* t = new Test;
@@ -45,7 +45,6 @@ Derived()
 #if 0
 Base()
 Derived()
-~Derived()
 ~Base()
 #endif
 }

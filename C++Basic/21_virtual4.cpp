@@ -10,7 +10,10 @@ class Dog : public Animal {
 public: 
     // 기반 클래스의 멤버 함수를 자식 클래스에서 다시 재정의할 수 있다.
     // => 함수 오버라이딩
-    virtual void Cry(){cout << "Dog Cry" << endl;} // 2
+    // virtual void Cry(){cout << "Dog Cry" << endl;} // 2
+
+    void Cry() override {cout << "Dog Cry" << endl;} // 2
+
     // 자식이 재정의하는 부모의 멤버 함수는 반드시 가상 함수이어야 한다.
 };
 
