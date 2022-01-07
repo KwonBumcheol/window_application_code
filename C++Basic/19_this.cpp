@@ -8,6 +8,7 @@ private:
     
 public:
     // this: 멤버 함수를 호출한 객체의 주소가 전달된다.
+    //      > 객체 주소값
     void set(int a, int b){ // void set(Point* const this, int a, int b)
         this->x = a;              // this->x = a;
         this->y = b;              // this->y = b;

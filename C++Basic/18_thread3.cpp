@@ -3,7 +3,7 @@
 #include <thread>
 #include <mutex>
 
-#if 0
+#if 1
 void foo(){
     std::cout << "foo" << std::endl;
 }
@@ -16,6 +16,7 @@ int main(){
 }
 #endif
 
+#if 0
 int sum = 0;
 std::mutex m;
 
@@ -38,3 +39,4 @@ int main(){
 
     std::cout << "sum: " << sum << std::endl;
 }
+#endif
