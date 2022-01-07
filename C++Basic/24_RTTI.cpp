@@ -11,6 +11,7 @@ public:
     int color = 200;
 };
 
+// 부모 소멸자가 가상이면 자식 클래스의 소멸자도 가상이다.
 class Sedan : public Car{
 public:
     int speed = 100;
@@ -50,10 +51,30 @@ void Go(Car* p){
     //  2. type_info는 가상함수 테이블 안에 존재한다.
 }
 
+void Go2(Car* p){
+    // 실행 시간에 하위 캐스팅을 타입 체크를 수행하면서 하고 싶다.
+    // => dynamic_cast
+    //  : 가상함수 테이블을 이용한다.
+
+    Sedan* s1 = static_cast<Sedan*>(p);
+    Sedan* s2 = dynamic_cast<Sedan*>(p);
+
+    cout << s1 << endl;
+    cout << s2 << endl;
+    cout << endl;
+
+    if(s2 != nullptr){
+        cout << "speed: " << s2->speed << endl;
+    }
+}
+
 int main(){
     Car c;
     Sedan s;
 
-    Go(&c);
-    Go(&s);
+    // Go(&c);
+    // Go(&s);
+
+    Go2(&c);
+    Go2(&s);
 }
