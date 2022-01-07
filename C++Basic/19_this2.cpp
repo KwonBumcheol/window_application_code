@@ -22,8 +22,13 @@ public:
     // : this->name(name), this->age(age) {} // error!
 
     void set(const std::string& name, int& age) {
+        // 1. this를 명시한다.
         // this->name = name;
         // this->age = age;
+        
+        // 2. 멤버 데이터의 이름을 다른 형식으로 사용한다.
+        // ex) name_ / age_
+        //     _name / _age - 권장하지 않음. 
         name_ = name;
         age_ = age;
     }
