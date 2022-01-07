@@ -15,6 +15,8 @@ int main(){
 }
 #endif
 
+// 가상 함수를 한개라도 가지고 있는 클래스는 반드시
+// 소멸자도 가상 소멸자이어야 한다.
 class Base{
 public:
     Base(){cout << "Base()" << endl;}
