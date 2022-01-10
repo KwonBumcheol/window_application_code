@@ -18,6 +18,7 @@ int main(){
 }
 #endif
 
+#if 0
 #include <stdio.h>
 
 namespace std
@@ -50,15 +51,34 @@ namespace std
             return *this;
         }       
     };
+
+    // 조직자(iomanipulator) 함수
     ostream& endl(ostream& os){
         os << '\n';
         return os;
     }
 
+    // 사용자가 endl에 대한 도구를 쉽게 만들어서,
+
     ostream cout;
+} // std
+#endif
+
+#include <iostream>
+
+std::ostream& tap(std::ostream& os){
+    return os << '\t';
+}
+
+std::ostream& menu(std::ostream& os){
+    return os << "1. 짜장면" << std::endl
+              << "2. 짬뽕" << std::endl
+              << "3. 비빔밥" << std::endl;
 }
 
 int main(){
-    std::cout << 42 << std::endl << std::endl;
+    std::cout << tap << 42 << std::endl;
     // std::cout.operator<<(std::endl)
+
+    std::cout << menu;
 }
