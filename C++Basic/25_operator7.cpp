@@ -20,6 +20,15 @@ public:
         return *this;
     }
 
+    // n++
+    // 차이점) 반환타입이 값 타입이다.
+    Integer operator++(int){
+        Integer temp = *this; // 값이 변경되기 전의 상태를 보관한다.
+        ++value;
+
+        return temp;
+    }
+
     friend std::ostream& operator<<(std::ostream& os, const Integer& i);
 };
 
