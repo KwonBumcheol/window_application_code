@@ -1,6 +1,7 @@
 #include <iostream>
 using namespace std;
 
+// 테스트를 목적으로 만든 코드이다.
 class A{
     int a;
 public:
