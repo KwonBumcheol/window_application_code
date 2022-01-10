@@ -8,6 +8,7 @@ using namespace std;
 //    해당 함수는 반드시 가상이어야 한다.
 // 3. 가상 함수가 존재하는 모든 부모 클래스는 반드시 가상 소멸자이어야 한다.
 
+// abstract class
 class Shape{
 public:
     virtual ~Shape(){}
@@ -35,9 +36,9 @@ public:
 
     // 6. 부모 클래스의 순수 가상 함수를 오버라이딩 해서, 구현을 제공하지 않을 경우
     //    자신도 "추상 클래스"로 취급한다.
-    // void Draw() override {
-    //     cout << "Rect draw" << endl;
-    // }  
+    void Draw() override {
+        cout << "Rect draw" << endl;
+    }  
 };
 
 class Circle : public Shape{
