@@ -3,6 +3,7 @@ using namespace std;
 
 // 스레드 클래스를 설계해보자.
 
+// g++ 27_thiscall4.cpp -lpthread
 #if 0
 #include <pthread.h>
 

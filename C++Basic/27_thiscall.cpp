@@ -10,8 +10,8 @@ class Point{
 public:
     // void set(Point* const this, int a, int b);
     void set(int a, int b){
-        x = a;
-        y = b;
+        x = a; // this->x = a;
+        y = b; // this->y = b;
     }
     
     // void foo(int a)
