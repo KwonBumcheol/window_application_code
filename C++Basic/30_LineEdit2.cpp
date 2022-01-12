@@ -45,7 +45,8 @@ public:
             if(c == '\n')
                 break;
             
-            if(isdigit(c)){
+            // if(isdigit(c)){
+            if(validate(c)){
                 data.push_back(c);
                 cout << c;
             }
