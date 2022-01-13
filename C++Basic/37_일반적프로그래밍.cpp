@@ -67,18 +67,19 @@ T1 xfind(T1 first, T1 last, T2 value){
     return first;
 }
 
+#include <algorithm> // find()
 #include <vector>
 
 int main(){
     vector<int> v = {1, 2, 3, 4, 5}; // C++11
 
-    auto p2 = xfind(v.begin(), v.end(), 3);
+    auto p2 = find(v.begin(), v.end(), 3);
     if(p2 != v.end())
         cout << *p2 << endl;
 
     char s[] = "abcdefg";
 
-    char* p = xfind(s + 2, s + 5, 'c');
+    char* p = find(s + 2, s + 5, 'c');
 
     if(p != s + 5) // 성공!
         cout << *p << endl;
