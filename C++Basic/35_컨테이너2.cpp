@@ -46,6 +46,9 @@ class Rect : public Object{};
 //    int, char, double, float, long ...
 //  => 레퍼 클래스가 필요하다.
 //  : Java, C#에서 제공하는 개념
+// 3) 데이터를 꺼내올 때마다 다운 캐스팅이 필요하다.
+// 장점
+//  : 템플릿 기반이 아니기 때문에 메모리 사용량이 효율적이다.
 
 class Integer : public Object{
     int value;
