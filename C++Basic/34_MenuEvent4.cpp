@@ -79,7 +79,7 @@ int main(){
     ICommand* fp = cmd(&foo);
     fp->Execute();
 
-    fp = new MemberCommand<Dialog>(&Dialog::Open, &dlg);
+    // fp = new MemberCommand<Dialog>(&Dialog::Open, &dlg);
     fp = cmd(&Dialog::Open, &dlg);
     fp->Execute();
 }
