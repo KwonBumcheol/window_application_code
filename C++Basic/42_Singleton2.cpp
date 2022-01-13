@@ -29,6 +29,7 @@ public:
     // => 예외 안전하게 사용하기 위해서, RAII를 이용해야 한다.
     //  RAII(Resource Acquision is Initialize)
     //  - 생성자, 소멸자를 이용해 자원을 관리한다.
+#if 0
     static Cursor& GetInstance(){
         // AutoLock al(sLock);
         std::lock_guard<std::mutex> al(sLock);
@@ -38,6 +39,13 @@ public:
         sLock.unlock();
         
         return *sInstance;
+    }
+#endif
+
+    // C++11/14
+    static Cursor& GetInstance(){
+        static Cursor* instance = new Cursor;
+        return *instance;
     }
 
 #if 0
