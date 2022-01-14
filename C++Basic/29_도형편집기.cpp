@@ -26,14 +26,14 @@ public:
 
 class Rect : public Shape{
 public:
-    void Draw(){
+    void Draw() override{
         cout << "Rect draw" << endl;
     }
 };
 
 class Circle : public Shape{
 public:
-    void Draw(){
+    void Draw() override{
         cout << "Circle draw" << endl;
     }
 };
