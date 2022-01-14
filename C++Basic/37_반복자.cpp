@@ -73,7 +73,8 @@ int main(){
     s.push_front(20);
     s.push_front(30);
 
-    Slist<int>::iterator p = xfind(s.begin(), s.end(), 20);
+    // Slist<int>::iterator p = xfind(s.begin(), s.end(), 20);
+    auto p = xfind(s.begin(), s.end(), 20);
     if(p != s.end())
         cout << *p << endl;
 }
