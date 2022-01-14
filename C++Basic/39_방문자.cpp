@@ -20,7 +20,6 @@ struct MenuVisitor{
 };
 
 // 방문자를 통해서 연산을 수행하도록 만들어주기 위해서는 아래 인터페이스를 구현해야 한다.
-// > 연산자
 struct MenuAcceptor{
     virtual ~MenuAcceptor(){}
 
